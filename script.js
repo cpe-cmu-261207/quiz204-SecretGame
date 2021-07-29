@@ -10,7 +10,7 @@ const btn_search = document.querySelector('#search')
 btn_toggle.onclick = () => {
   const name = author.innerHTML
   let number = /\d+/
-  author.innerHTML = name.match(number)-length.innerHTML
+  author.innerHTML = name.match(number)-length.value
 }
 
 
