@@ -8,11 +8,20 @@ const color = document.querySelector('#color')
 const btn_search = document.querySelector('#search')
 
 btn_toggle.onclick = () => {
-  const name = author.innerHTML
-  let number = /\d+/
-  author.innerHTML = name.match(number)-length.value
+  if(btn_toggle.innerHTML === 'Display Calculation'){
+    let name = author.innerHTML
+    let number = /\d+/
+    calculation.innerHTML = name.match(number)-length.value
+    btn_toggle.innerHTML = "Display author"
+    author.style.display = "none"
+    calculation.style.display = "block"
+  }
+  else{
+    btn_toggle.innerHTML = 'Display Calculation'
+    author.style.display = "block"
+    calculation.style.display = "none"
+  }
 }
-
 
 
 // more codes for Search and Reset buttons here
